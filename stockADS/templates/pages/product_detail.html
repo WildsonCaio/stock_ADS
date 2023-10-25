@@ -17,12 +17,25 @@
             <label class="fs-3 text-white" for="">Stock ADS</label>
         </nav>
     </header>
-    <div class="container d-flex justify-content-between bg-danger my-5">
+    <div class="container d-flex justify-content-between my-5">
         <div class="card">
             <img src="{{product.picture.url}}" alt="">
         </div>
         <div class="info-detail">
-            <h2>{{product.name}}</h2>
+            <p class="font-italic mb-1 fs-4">{{product.category}}</p>
+            <h1 class="font-weight-bold">{{product.name}}</h1>
+            <h2>R$ {{product.price}}</h2>
+            <div class="input-control d-flex gap-2 w-50 justify-content-between my-3">
+                <h2>Em estoque </h2>
+                <input type="text" class="form-control w-25" disabled value="{{product.qtd}}">
+            </div>
+            <div class="input-control d-flex gap-2 w-50 justify-content-between my-3">
+                <h2>Desconto </h2>
+                <input type="text" class="form-control w-25" disabled value="{{product.discount}}">
+            </div>
+            <h3>Detalhes do Produto</h3>
+            <textarea name="" id="" cols="70" rows="6" class="p-3" disabled>{{product.description}}</textarea>
+        
         </div>
     </div>
 
