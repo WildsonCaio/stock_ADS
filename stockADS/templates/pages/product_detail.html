@@ -20,6 +20,7 @@
     <div class="container d-flex justify-content-between my-5">
         <div class="card">
             <img src="{{product.picture.url}}" alt="">
+            <a href="{% url 'delete-product' product.id %}" class="btn btn-danger fs-4">Excluir Produto</a>
         </div>
         <div class="info-detail">
             <p class="font-italic mb-1 fs-4">{{product.category}}</p>
@@ -35,7 +36,6 @@
             </div>
             <h3>Detalhes do Produto</h3>
             <textarea name="" id="" cols="70" rows="6" class="p-3" disabled>{{product.description}}</textarea>
-        
         </div>
     </div>
 
