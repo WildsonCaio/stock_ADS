@@ -15,6 +15,10 @@
     <header>
         <nav class="navbar d-flex justify-content-between py-2 px-5 bg-secondary ">
             <label class="fs-3 text-white" for="">Stock ADS</label>
+            <form action="{% url 'search-product' %}" class="d-flex gap-1">
+                <input type="search" name="q">
+                <button class="btn btn-success">Buscar</button>
+            </form>
         </nav>
     </header>
     <div class="container">

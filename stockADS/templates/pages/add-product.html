@@ -11,17 +11,17 @@
 
     <form method="POST" class="container mt-5" enctype="multipart/form-data"> {% csrf_token %}
         <h1>Adicionar Produto</h1>
-        <input class="form-control my-1" type="text" name="name" placeholder="nome">
-        <select class="form-control my-1" name="category" id="">
+        <input class="form-control my-1" required type="text" name="name" placeholder="Nome">
+        <select class="form-control my-1" required name="category" id="">
             {% for category in categories %}
             <option value="{{category.id}}">{{ category.name }}</option>
             {% endfor %}
         </select>
-        <input class="form-control my-1" type="file" name="picture" placeholder="Imagem">
-        <input class="form-control my-1" type="text" name="price" placeholder="Preço">
-        <input class="form-control my-1" type="text" name="description" placeholder="Descrição">
-        <input class="form-control my-1" type="text" name="qtd" placeholder="Quantidade">
-        <input class="form-control my-1" type="text" name="discount" placeholder="Desconto">
+        <input class="form-control my-1" required type="file" name="picture" placeholder="Imagem">
+        <input class="form-control my-1" required type="number" name="price" placeholder="Preço">
+        <textarea class="form-control my-1" name="description" id="" cols="30" rows="8" placeholder="Descrição" required></textarea>
+        <input class="form-control my-1" required type="number" name="qtd" placeholder="Quantidade">
+        <input class="form-control my-1" required type="number" name="discount" placeholder="Desconto">
         <button type="submit" class="btn btn-success mt-2">Salvar</button>
     </form>
     

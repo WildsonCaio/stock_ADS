@@ -8,6 +8,11 @@ def index(request):
     produtos = Products.objects.all()
     return render(request, 'pages/index.html', {'produtos': produtos})
 
+def search_product(request):
+    q = request.GET.get('q')
+    produtos = Products.objects.filter(name__icontains=q)
+    return render(request, 'pages/index.html', {'produtos': produtos})
+
 
 def add_product(request):
 
