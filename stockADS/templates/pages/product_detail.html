@@ -20,7 +20,8 @@
     <div class="container d-flex justify-content-between my-5">
         <div class="card">
             <img src="{{product.picture.url}}" alt="">
-            <a href="{% url 'delete-product' product.id %}" class="btn btn-danger fs-4">Excluir Produto</a>
+            <a href="{% url 'delete-product' product.id %}" class="btn btn-danger fs-4 mb-2">Excluir Produto</a>
+            <a href="{% url 'sell-product' product.id %}" class="btn btn-secondary fs-4">Vender Unidade</a>
         </div>
         <div class="info-detail">
             <p class="font-italic mb-1 fs-4">{{product.category}}</p>
