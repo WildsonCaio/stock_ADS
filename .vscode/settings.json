@@ -3,5 +3,6 @@
         "stockADS"
     ],
     "python.testing.unittestEnabled": false,
-    "python.testing.pytestEnabled": true
+    "python.testing.pytestEnabled": true,
+    "workbench.tree.indent": 8
 }
